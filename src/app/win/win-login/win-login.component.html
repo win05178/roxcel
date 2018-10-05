@@ -1,0 +1,42 @@
+<form class="" action="#">
+
+  <div class="form-group m-b-20 row">
+    <div class="col-12">
+      <label for="username">{{message[locale].userName}}</label>
+      <input class="form-control" type="email" id="username" required="" [placeholder]="message[locale].userNamePlaceholder">
+    </div>
+  </div>
+
+  <div class="form-group row m-b-20">
+    <div class="col-12">
+      <a href="page-recoverpw.html" class="text-muted pull-right"><small>{{message[locale].forgetPassword}}</small></a>
+      <label for="password">{{message[locale].password}}</label>
+      <input class="form-control" type="password" required="" id="password"[placeholder]="message[locale].passwordPlaceholder">
+    </div>
+  </div>
+
+  <div class="form-group row m-b-20">
+    <div class="col-12">
+
+      <div class="checkbox checkbox-custom">
+        <input id="remember" type="checkbox" checked="">
+        <label for="remember">
+          {{message[locale].rememberMe}}
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="form-group row text-center m-t-10">
+    <div class="col-12">
+      <button class="btn btn-block btn-custom waves-effect waves-light" type="submit"> {{message[locale].login}}</button>
+    </div>
+  </div>
+
+</form>
+<div class="row m-t-50" *ngIf="allowRegister">
+  <div class="col-sm-12 text-center">
+    <p class="text-muted">{{message[locale].noHaveAccount}} <a href="#" (click)="register()" class="text-dark m-l-5"><b>{{message[locale].signUp}}</b></a></p>
+  </div>
+</div>

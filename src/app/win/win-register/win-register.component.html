@@ -1,0 +1,36 @@
+
+        <form class="form-horizontal" action="#" (submit)="signUp()">
+
+          <div class="form-group row m-b-20" *ngFor="let r of inputRegister">
+            <div class="col-12">
+              <label [for]="r.name">{{message[locale][r.name]}}</label>
+              <input class="form-control" [type]="r.type" [id]="r.name" required="" [(ngModel)]="model[r.name]" [ngModelOptions]="{standalone: true}" [placeholder]="message[locale][r.placeholder]">
+            </div>
+          </div>
+
+          <div class="form-group row m-b-20">
+            <div class="col-12">
+
+              <div class="checkbox checkbox-custom">
+                <input id="remember" type="checkbox" checked="">
+                <label for="remember">
+                  {{message[locale].accept}} <a href="#" class="text-custom">{{message[locale].condition}}</a>
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-group row text-center m-t-10">
+            <div class="col-12">
+              <button class="btn btn-block btn-custom waves-effect waves-light" type="submit"> {{message[locale].signUpFree}}</button>
+            </div>
+          </div>
+
+        </form>
+
+        <div class="row m-t-50">
+          <div class="col-sm-12 text-center">
+            <p class="text-muted">{{message[locale].alreadyAccount}}  <a href="page-login.html" class="text-dark m-l-5"><b>{{message[locale].signIn}}</b></a></p>
+          </div>
+        </div>
